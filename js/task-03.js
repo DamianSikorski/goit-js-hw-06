@@ -23,9 +23,6 @@ for (const image of images) {
   const img = document.createElement("img");
   img.setAttribute("src", image.url);
   img.setAttribute("alt", image.alt);
-  img.style.width = "300px";
-  img.style.height = "200px";
-  img.style.borderRadius = "12px";
   li.appendChild(img);
   galleryList.appendChild(li);
 }

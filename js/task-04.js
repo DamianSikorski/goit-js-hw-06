@@ -8,7 +8,7 @@ const increaseValue = () => {
   counterValue++;
   setCurrentValue();
 };
-const deacreaseValue = () => {
+const decreaseValue = () => {
   counterValue--;
   setCurrentValue();
 };
@@ -18,4 +18,4 @@ const setCurrentValue = () => {
 };
 
 incrementBtn.addEventListener("click", increaseValue);
-decrementBtn.addEventListener("click", deacreaseValue);
+decrementBtn.addEventListener("click", decreaseValue);

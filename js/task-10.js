@@ -14,7 +14,6 @@ const createBoxes = () => {
 
   if (input.value == "") {
     info.textContent = "Enter the number before clicking this button!";
-    info.style.color = "red";
   } else {
     for (let i = 0; i < numberOfBoxes; i++) {
       const div = document.createElement("div");
@@ -24,7 +23,6 @@ const createBoxes = () => {
       div.style.background = `${getRandomHexColor()}`;
       dimensions = dimensions + 10;
       info.textContent = `Wow! You just created ${input.value} Divs 👻`;
-      info.style.color = `green`;
     }
   }
 };
@@ -33,13 +31,11 @@ const destroyBoxes = () => {
   if (boxesDiv.firstChild) {
     while (boxesDiv.firstChild) {
       boxesDiv.removeChild(boxesDiv.lastChild);
-      info.textContent = `Huh... it seems like you destroyed all divs! 🤔`;
-      info.style.color = "black";
     }
+    info.textContent = `Huh... it seems like you destroyed all divs! 🤔`;
   } else {
     info.textContent =
       "If you want to destroy, you have to create something first!";
-    info.style.color = "red";
   }
 };
 
