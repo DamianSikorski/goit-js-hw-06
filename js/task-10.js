@@ -30,10 +30,16 @@ const createBoxes = () => {
 };
 
 const destroyBoxes = () => {
-  while (boxesDiv.firstChild) {
-    boxesDiv.removeChild(boxesDiv.lastChild);
-    info.textContent = `Huh... it seems like you destroyed all divs! 🤔`;
-    info.style.color = "black";
+  if (boxesDiv.firstChild) {
+    while (boxesDiv.firstChild) {
+      boxesDiv.removeChild(boxesDiv.lastChild);
+      info.textContent = `Huh... it seems like you destroyed all divs! 🤔`;
+      info.style.color = "black";
+    }
+  } else {
+    info.textContent =
+      "If you want to destroy, you have to create something first!";
+    info.style.color = "red";
   }
 };
 
